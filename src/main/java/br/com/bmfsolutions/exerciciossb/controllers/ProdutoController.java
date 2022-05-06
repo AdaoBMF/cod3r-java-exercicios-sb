@@ -45,7 +45,9 @@ public class ProdutoController {
 	
 	@GetMapping("nome/{qur}")
 	public Iterable<Produto> getProdutosPorNome(@PathVariable String qur) {
-//		return produtoRepository.findByNomeContaining(qur);
+		
+	/*	return produtoRepository.findByNomeContaining(qur); ERRO REPORTADO NO CANAL DE DÚVIDAS DO CURSO */
+		
 		return produtoRepository.searchByNaneLike(qur);
 	}
 	
